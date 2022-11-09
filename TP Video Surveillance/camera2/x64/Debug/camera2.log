@@ -1,0 +1,4 @@
+﻿  camera.cpp
+  main.cpp
+c:\users\charles\source\repos\camera2\camera2\camera.h(4): fatal error C1083: Impossible d'ouvrir le fichier include : 'qtcpsocket.h' : No such file or directory (compilation du fichier source camera.cpp)
+c:\users\charles\source\repos\camera2\camera2\camera.h(4): fatal error C1083: Impossible d'ouvrir le fichier include : 'qtcpsocket.h' : No such file or directory (compilation du fichier source main.cpp)

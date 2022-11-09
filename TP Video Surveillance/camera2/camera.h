@@ -1,7 +1,7 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 
-#include <QTcpSocket>
+#include <qtcpsocket.h>
 #include <QtWebSockets/QtWebSockets>
 #include "QtWebSockets/qwebsocketserver.h"
 #include "QtWebSockets/qwebsocket.h"
@@ -18,16 +18,16 @@ class Camera : public QObject
     private:
 
         QTcpSocket *socket;
-        QWebSocketServer *webSocketServer;
+     
         QWebSocket * obj;
 
     public slots:
         void issue(QByteArray data);
 
         void onSocketConnected();
-        void newWebConnexion();
+     
         void processTextMessage(QString message);
-        void webSocketDisonnected();
+        
 
     // Camera functions
 
