@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.2092
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TP Sondeur Marin", "TP Sondeur Marin\TP Sondeur Marin.vcxproj", "{C536FC28-4C99-453D-A1F8-BC247D38812C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C536FC28-4C99-453D-A1F8-BC247D38812C}.Debug|x64.ActiveCfg = Debug|x64
+		{C536FC28-4C99-453D-A1F8-BC247D38812C}.Debug|x64.Build.0 = Debug|x64
+		{C536FC28-4C99-453D-A1F8-BC247D38812C}.Release|x64.ActiveCfg = Release|x64
+		{C536FC28-4C99-453D-A1F8-BC247D38812C}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C7A0FD28-B6BB-409A-A462-088DD18F5FA3}
+	EndGlobalSection
+EndGlobal
