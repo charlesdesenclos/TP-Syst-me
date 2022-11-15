@@ -30,9 +30,7 @@ TPSondeurMarin::TPSondeurMarin(QWidget *parent)
 	port->setFlowControl(QSerialPort::NoFlowControl);
 	qDebug() << "Le port connecté";
 
-	// durée d'acquisition en seconde
-
-	duree = new QTimer();
+	
 }
 
 TPSondeurMarin::~TPSondeurMarin()
@@ -66,7 +64,7 @@ void TPSondeurMarin::affichevaleur()
 		QStringList resDataListProfondeur = regExpProfondeur.capturedTexts();
 		QString resDataProfondeur = resDataListProfondeur[0];
 		QString profondeur = resDataProfondeur.left(resDataProfondeur.size());
-		dataProfondeur = profondeur.split(QLatin1Char(','), Qt::SkipEmptyParts);
+		dataProfondeur = profondeur.split(QLatin1Char(','), Qt::SkipEmptyParts); // fractionne la chaine
 
 		QString Profondeur = dataProfondeur[9];
 
@@ -80,7 +78,7 @@ void TPSondeurMarin::affichevaleur()
 		QStringList resDataListTemperature = regExpTemperature.capturedTexts();
 		QString resDataTemperature = resDataListTemperature[0];
 		QString temperature = resDataTemperature.left(resDataTemperature.size());
-		dataListTemperature = temperature.split(QLatin1Char(','), Qt::SkipEmptyParts);
+		dataListTemperature = temperature.split(QLatin1Char(','), Qt::SkipEmptyParts); // fractionne la chaine
 
 		//Affichage dans le label correspondant au label de la température
 
