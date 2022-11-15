@@ -66,11 +66,11 @@ void TPSondeurMarin::affichevaleur()
 		QString profondeur = resDataProfondeur.left(resDataProfondeur.size());
 		dataProfondeur = profondeur.split(QLatin1Char(','), Qt::SkipEmptyParts); // fractionne la chaine
 
-		QString Profondeur = dataProfondeur[9];
+		QString Profondeur = dataProfondeur[9]; 
 
 		//Affichage dans le label correspondant au label de profondeur 
 
-		ui.LabelAfficheProfondeur->setText(Profondeur);
+		ui.LabelAfficheProfondeur->setText(Profondeur); // Affichage dans l'interface via le nom du label correspondant
 
 		// Température
 
@@ -84,7 +84,7 @@ void TPSondeurMarin::affichevaleur()
 
 		QString Temperature = dataListTemperature[1];
 
-		ui.LabelAfficheTemperature->setText(Temperature);
+		ui.LabelAfficheTemperature->setText(Temperature); // Affichage dans l'interface via le nom du label correspondant
 	}
 	
 }
