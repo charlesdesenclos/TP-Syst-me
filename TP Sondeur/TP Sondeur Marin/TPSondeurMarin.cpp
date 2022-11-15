@@ -2,7 +2,7 @@
 #include <QtWidgets/QApplication>
 //*********************************************************************************************
 //* Programme : TPSondeurMarin.cpp							Date : 14/11/2022
-//*													Dernière MAJ : NA
+//*													Dernière MAJ : 15/11/2022
 //*--------------------------------------------------------------------------------------------
 //*Programmeurs :	Desenclos Charles							Classe : BTSSN2
 //*					Suard Enzo
