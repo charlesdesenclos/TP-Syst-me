@@ -16,17 +16,22 @@ class TPSondeurMarin : public QMainWindow
 public:
     TPSondeurMarin(QWidget *parent = nullptr);
     ~TPSondeurMarin();
+	                          
 
 private:
     Ui::TPSondeurMarinClass ui;
 	QSerialPort * port;
+	QString data;
+	QStringList dataProfondeur;
+	QStringList dataListTemperature;
 
 	QTimer * duree;
 
 
 public slots:
 	
-	void lecture();
-	void FinDureeLecture();/*
-	void PortLecture();*/
+	void connectionPort();
+	void deconnectionPort();
+	void affichevaleur();
+	
 };

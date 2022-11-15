@@ -40,23 +40,55 @@ TPSondeurMarin::~TPSondeurMarin()
 
 }
 
-void TPSondeurMarin::lecture()
+void TPSondeurMarin::connectionPort()
 {
-	// pour la durée
-	duree->start(15000);
-	QObject::connect(duree, SIGNAL(timeout()), this, SLOT(FinDureeLecture()));
+	QObject::connect(port, SIGNAL(readyRead()), this, SLOT(affichevaleur()));
+}
+
+void TPSondeurMarin::deconnectionPort()
+{
+	QObject::disconnect(port, nullptr, nullptr, nullptr);
+}
+
+void TPSondeurMarin::affichevaleur()
+{
+	QByteArray dataR = port->readAll();
+	data = data + dataR.toStdString().c_str();
+
+	QRegExp regExpProfondeur("\\$GPGGA([^\*]\*)");
+	QRegExp regExpTemperature("\\$SDMTW([^\*]\*)");
+
+	if (regExpProfondeur.indexIn(data) > -1 && regExpTemperature.indexIn(data) > -1)
+	{
+		//Profondeur
+		
+		// on découpe la trame pour juste avoir les valeurs pour la profondeur
+		QStringList resDataListProfondeur = regExpProfondeur.capturedTexts();
+		QString resDataProfondeur = resDataListProfondeur[0];
+		QString profondeur = resDataProfondeur.left(resDataProfondeur.size());
+		dataProfondeur = profondeur.split(QLatin1Char(','), Qt::SkipEmptyParts);
+
+		QString Profondeur = dataProfondeur[9];
+
+		//Affichage dans le label correspondant au label de profondeur 
+
+		ui.LabelAfficheProfondeur->setText(Profondeur);
+
+		// Température
+
+		// on découpe la trame pour juste avoir les valeurs pour la température
+		QStringList resDataListTemperature = regExpTemperature.capturedTexts();
+		QString resDataTemperature = resDataListTemperature[0];
+		QString temperature = resDataTemperature.left(resDataTemperature.size());
+		dataListTemperature = temperature.split(QLatin1Char(','), Qt::SkipEmptyParts);
+
+		//Affichage dans le label correspondant au label de la température
+
+		QString Temperature = dataListTemperature[1];
+
+		ui.LabelAfficheTemperature->setText(Temperature);
+	}
 	
-	// pour le port
-
-	port->clear();
-	QObject::connect(port, SIGNAL(readyRead()), this, SLOT(PortLecture()));
 }
 
-void TPSondeurMarin::FinDureeLecture()
-{
-	// pour se déconnecter le port et la duree
-	duree->stop();
-	QObject::disconnect(duree, SIGNAL(timeout()), this, SLOT(FinDureeLecture()));
-	QObject::disconnect(port, SIGNAL(readyRead()), this, SLOT(PortLecture()));
 
-}
