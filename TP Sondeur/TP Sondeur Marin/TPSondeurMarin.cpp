@@ -21,9 +21,9 @@ TPSondeurMarin::TPSondeurMarin(QWidget *parent)
 	// Ouverture des ports
 	
 	port = new QSerialPort(this);
-	port->setPortName("COM1");
+	port->setPortName("COM5");
 	port->open(QIODevice::ReadWrite);
-	port->setBaudRate(QSerialPort::Baud4800);
+	port->setBaudRate(QSerialPort::Baud9600);
 	port->setDataBits(QSerialPort::DataBits::Data8);
 	port->setParity(QSerialPort::Parity::NoParity);
 	port->setStopBits(QSerialPort::StopBits::OneStop);
@@ -40,11 +40,23 @@ TPSondeurMarin::~TPSondeurMarin()
 
 void TPSondeurMarin::connectionPort()
 {
+	// on fixe la durée d'aquisition à 15 secondes ici la duree en milliseconde
+	duree->start(15000);
+	QObject::connect(duree, SIGNAL(timeout()), this, SLOT(deconnectionPort())));
+
+	port->clear();
+
 	QObject::connect(port, SIGNAL(readyRead()), this, SLOT(affichevaleur()));
 }
 
 void TPSondeurMarin::deconnectionPort()
 {
+	// arrête la duree d'acquisition
+	duree->stop();
+	QObject::disconnect(duree, SIGNAL(timeout()), this, SLOT(deconnectionPort));
+
+	//arrête le port
+
 	QObject::disconnect(port, nullptr, nullptr, nullptr);
 }
 
