@@ -9,9 +9,11 @@
 //*					 
 //*--------------------------------------------------------------------------------------------
 //*
-//* BUT : Permet de récupérer les trames GPS pendant 15 secondes et d'afficher la trame complète et ses parties.
+//* BUT : Permet de récupérer les trames de la profondeur et de la température pendant 15 secondes et d'afficher la trame complète et ses parties.
 //*
 //*********************************************************************************************
+
+//Constructeur
 
 TPSondeurMarin::TPSondeurMarin(QWidget *parent)
     : QMainWindow(parent)
@@ -32,6 +34,8 @@ TPSondeurMarin::TPSondeurMarin(QWidget *parent)
 
 	
 }
+
+//destructeur
 
 TPSondeurMarin::~TPSondeurMarin()
 {
