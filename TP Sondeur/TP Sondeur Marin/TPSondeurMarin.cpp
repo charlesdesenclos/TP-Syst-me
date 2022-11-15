@@ -42,7 +42,7 @@ void TPSondeurMarin::connectionPort()
 {
 	// on fixe la durée d'aquisition à 15 secondes ici la duree en milliseconde
 	duree->start(15000);
-	QObject::connect(duree, SIGNAL(timeout()), this, SLOT(deconnectionPort())));
+	QObject::connect(duree, SIGNAL(timeout()), this, SLOT(deconnectionPort()));
 
 	port->clear();
 

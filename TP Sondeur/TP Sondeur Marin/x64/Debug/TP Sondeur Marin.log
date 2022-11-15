@@ -1,7 +1,4 @@
 ﻿  TPSondeurMarin.cpp
-  main.cpp
-c:\users\charles\documents\github\tp-systeme\tp sondeur\tp sondeur marin\tpsondeurmarin.cpp(56): warning C4129: '*' : caractère de séquence d'échappement non reconnu
-c:\users\charles\documents\github\tp-systeme\tp sondeur\tp sondeur marin\tpsondeurmarin.cpp(57): warning C4129: '*' : caractère de séquence d'échappement non reconnu
-  qrc_TPSondeurMarin.cpp
-  moc_TPSondeurMarin.cpp
+c:\users\charles\documents\github\tp-systeme\tp sondeur\tp sondeur marin\tpsondeurmarin.cpp(68): warning C4129: '*' : caractère de séquence d'échappement non reconnu
+c:\users\charles\documents\github\tp-systeme\tp sondeur\tp sondeur marin\tpsondeurmarin.cpp(69): warning C4129: '*' : caractère de séquence d'échappement non reconnu
   TP Sondeur Marin.vcxproj -> C:\Users\Charles\Documents\GitHub\TP-Systeme\TP Sondeur\x64\Debug\TP Sondeur Marin.exe
