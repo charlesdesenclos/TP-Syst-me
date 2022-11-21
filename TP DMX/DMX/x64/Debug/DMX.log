@@ -1,0 +1,10 @@
+﻿  uic DMX.ui
+  rcc DMX.qrc
+  moc DMX.h
+   RCC: Warning: No resources in 'C:\Users\Charles\source\repos\DMX\DMX\DMX.qrc'.
+  pilotageLumiere.cpp
+  DMX.cpp
+  main.cpp
+  qrc_DMX.cpp
+  moc_DMX.cpp
+  DMX.vcxproj -> C:\Users\Charles\source\repos\DMX\x64\Debug\DMX.exe
