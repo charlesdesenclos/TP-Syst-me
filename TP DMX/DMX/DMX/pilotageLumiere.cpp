@@ -6,13 +6,13 @@ pilotageLumiere::pilotageLumiere(QWidget *parent)
 {
     ui.setupUi(this);
 
+    
+    g_dasusbdll = LoadLibrary(L"DasHard2006.dll"); // Chargement dll
 
-    g_dasusbdll = LoadLibrary(L"DasHard2006.dll");
-
-    if (g_dasusbdll)
+    if (g_dasusbdll) // vérification chargement dll
         DasUsbCommand = (DASHARDCOMMAND)::GetProcAddress((HMODULE)g_dasusbdll, "DasUsbCommand");
-    interface_open = DasUsbCommand(DHC_INIT, 0, NULL);
-    interface_open = DasUsbCommand(DHC_OPEN, 0, 0);
+    interface_open = DasUsbCommand(DHC_INIT, 0, NULL); // initialisation de la dll
+    interface_open = DasUsbCommand(DHC_OPEN, 0, 0); // ouverture de la liason interface usb
 
     
 
@@ -24,7 +24,7 @@ pilotageLumiere::~pilotageLumiere()
 }
 
 
-void __fastcall pilotageLumiere::SendTrame() {
+void __fastcall pilotageLumiere::SendTrame() { // envoie la trame
     if (interface_open > 0)
     {
         try {
