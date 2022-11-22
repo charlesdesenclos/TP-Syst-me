@@ -43,8 +43,8 @@
    <widget class="QLabel" name="labellumiere3">
     <property name="geometry">
      <rect>
-      <x>130</x>
-      <y>230</y>
+      <x>120</x>
+      <y>290</y>
       <width>81</width>
       <height>41</height>
      </rect>
@@ -53,34 +53,265 @@
      <string>Lumière 3 :</string>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="textlumiere1">
+   <widget class="QScrollBar" name="barlumiere1rouge">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>240</x>
       <y>20</y>
-      <width>251</width>
-      <height>81</height>
+      <width>160</width>
+      <height>16</height>
      </rect>
     </property>
-   </widget>
-   <widget class="QTextBrowser" name="textlumiere2">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>120</y>
-      <width>251</width>
-      <height>81</height>
-     </rect>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="textlumiere3">
+   <widget class="QScrollBar" name="barlumiere1vert">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>240</x>
+      <y>60</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="barlumiere1bleu">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>100</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="barlumiere2rouge">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>140</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="barlumiere2vert">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>180</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="barlumiere2bleu">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
       <y>220</y>
-      <width>251</width>
-      <height>81</height>
+      <width>160</width>
+      <height>16</height>
      </rect>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="barlumiere3rouge">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>280</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="barlumiere3vert">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>320</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="barlumiere3bleu">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>360</y>
+      <width>160</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labellumiere1rouge">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>30</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Rouge :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labellumiere2rouge">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>140</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Rouge :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labellumiere3rouge">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>280</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Rouge :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labellumiere1vert">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>60</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Vert</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labellumiere2vert">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>190</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Vert</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labellumiere3vert">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>320</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Vert</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labellumiere1bleu">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>100</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Bleu</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labellumiere2bleu">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>220</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Bleu</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labellumiere3bleu">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>360</y>
+      <width>47</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Bleu</string>
     </property>
    </widget>
   </widget>

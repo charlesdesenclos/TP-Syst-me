@@ -23,6 +23,8 @@ public:
 
     void __fastcall SendTrame();
 
+ 
+
 private:
     Ui::pilotageLumiereClass ui;
 
